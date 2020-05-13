@@ -40,8 +40,8 @@ OBJS = $(SRCS:.c=.o)
 all: lib $(NAME)
 
 lib :
-	# git submodule init
-	# git submodule update --remote
+	git submodule init
+	git submodule update --remote
 	@make -C $(LIBFT)
 
 %.o: %.c
