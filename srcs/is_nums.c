@@ -1,19 +1,6 @@
 
 #include "lem_in.h"
 
-// int		ft_isnums(const char *str)
-// {
-// 	if (!str)
-// 		return (0);
-// 	while (*str)
-// 	{
-// 		if (!ft_isdigit(*str))
-// 			return (0);
-// 		str++;
-// 	}
-// 	return (1);
-// }
-
 int		ft_isnums(const char *str)
 {
 	int i;
