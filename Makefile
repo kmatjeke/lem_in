@@ -38,11 +38,11 @@ $(NAME): $(OBJS)
 clean:
 	@/bin/echo "Cleaning ..."
 	@/bin/rm -f $(OBJS)
-	@make -C $(LIBFT) clean &> /dev/null
+	@make -C $(LIBFT) clean
 	@/bin/echo "All .o Removed!"
 
 fclean: clean
-	@make -C $(LIBFT) fclean &> /dev/null
+	@make -C $(LIBFT) fclean 
 	@/bin/rm -f $(NAME)
 	@/bin/echo "$(NAME) Removed!"
 
