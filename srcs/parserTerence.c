@@ -94,7 +94,7 @@ unsigned char			ft_parse() {
 		return (1);
 	ft_putstr(str);
 	ft_putchar('\n');
-	if (ft_strisdigit(str))
+	if (ft_isnums(str))
 	    check = 0;
 	else
 	    check = 1;

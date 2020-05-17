@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-// int		ft_strisdigit(const char *str)
+// int		ft_isnums(const char *str)
 // {
 // 	if (!str)
 // 		return (0);
@@ -14,7 +14,7 @@
 // 	return (1);
 // }
 
-int		ft_strisdigit(const char *str)
+int		ft_isnums(const char *str)
 {
 	int i;
 

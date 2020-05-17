@@ -33,6 +33,6 @@ t_list				*ft_find_name(t_list *room, size_t index);
 
 unsigned char		ft_parse(void);
 int					ft_solve(int ants, unsigned int c, unsigned int v, int u);
-int					ft_strisdigit(const char *str);
+int					ft_isnums(const char *str);
 
 #endif
