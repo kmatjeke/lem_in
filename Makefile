@@ -27,13 +27,20 @@ NAME = lem-in
 SRCS_PATH = srcs/
 INCLUDES_PATH = includes/
 INCLUDES = -I includes/ -I libft/
-FILES = lem_in.c \
-		singletons.c \
-		parser.c \
-		utils.c \
-		solver.c \
-		ft_strisdigit.c \
-		ft_getline.c
+#FILES = lem_in.c \
+#		singletons.c \
+#		parser.c \
+#		utils.c \
+#		solver.c \
+#		ft_strisdigit.c \
+#		ft_getline.c
+FILES = lem_in_2.c \
+		singletons_2.c \
+		parserTerence.c \
+		utilities.c \
+		solverEmanana.c \
+		is_nums.c \
+		ft_getlineNkholane.c
 SRCS = $(addprefix $(SRCS_PATH), $(FILES))
 OBJS = $(SRCS:.c=.o)
 

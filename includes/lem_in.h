@@ -14,7 +14,7 @@
 # define LEM_IN_H
 
 #ifndef BUFF_SIZE
-# define BUFF_SIZE
+# define BUFF_SIZE 32
 # endif
 
 # include "libft.h"
