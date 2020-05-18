@@ -25,6 +25,7 @@ static unsigned char	show_result(int ants, int temp[], int room[], int ant_index
 			ft_putnbr(ants - index);	//prints the ant name/index, by minusing index from the total number of ants.
 			ft_putchar('-');	//prints '-' on stdout.
 			ft_putstr(ft_find_name(*get_room(), ant_index)->content);	//gets and prints the name of the room by passing the nade content to the function ft_find_name.
+			ft_putchar(' ');
 			
 			return (show_result(ants, temp, room, room[ant_index])); //returns this function recursively until there are no more ants to move this turn.
 		}
