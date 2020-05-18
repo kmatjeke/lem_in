@@ -1,11 +1,15 @@
 #include "lem_in.h"
 
 static unsigned char	ft_check_command(char *str) {
-    if (!ft_strcmp("##start", str))
-        start_frame()->start=1;
+    if (!ft_strcmp("##start", str)) {
+        start_frame()->start = 1;
+        start = 1;
+    }
     else {
-        if (!ft_strcmp("##end", str))
-            start_frame()->end =1;
+        if (!ft_strcmp("##end", str)) {
+            start_frame()->end = 1;
+            end = 1;
+        }
         else
             return 0;
     }

@@ -31,6 +31,11 @@ int			***get_path(void)
 	static int		**path = NULL;  //creating a 2 dimensional integer array. and initialising it to NULL
 	unsigned int	i;
 
+	if (start != 1 || end != 1) {
+	    ft_putstr("\nERROR");
+	    exit(0);
+	}
+
 	if (path == NULL)
 	{
 		path = (int**)ft_memalloc(sizeof(int*) * start_frame()->count); //allocating memory for the whole 2 dimensional array.

@@ -8,6 +8,8 @@
 
 # include "libft.h"
 
+int start;
+int end;
 
 typedef struct		s_frame
 {
