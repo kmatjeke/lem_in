@@ -91,8 +91,9 @@ static unsigned char	ft_add_path(char *str) {
 }
 
 unsigned char			ft_parse() {
-	char	*str;
-	unsigned char check;
+	char			*str;
+	unsigned char	check;
+	int				ver_rooms = 0;
 
 	if (ft_getline(0, &str) < 1)
 		return (1);
@@ -112,10 +113,17 @@ unsigned char			ft_parse() {
 		else if (!(check || !ft_strstr(str, "-")))
 			check = ft_add_path(str);
 		else if (!(check || *str == 'L'))
+		{
 			check = ft_add_room(str);
+			ver_rooms = 1;
+		}
 		else
 			check = 1;
 		free(str);
+	}
+	if (ver_rooms != 1)
+	{
+		check = 1;
 	}
 	free(str);
 	return (check);

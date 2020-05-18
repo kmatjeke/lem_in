@@ -1,10 +1,10 @@
 
 #include "lem_in.h"
 
-static int		ft_error(char *str, int ft_errnum) //function which prints errors encountered in the program.
+static int		ft_error(char *str, int fd) //function which prints errors encountered in the program.
 {
 	ft_putstr_fd(str, 2);
-	return (ft_errnum);
+	return (fd);
 }
 
 static unsigned char	show_result(int ants, int temp[], int room[], int ant_index)
@@ -51,8 +51,11 @@ static unsigned char	calculate_and_print(int ants, int temp[])
 int				main(void)
 {
 	int				*temp;
+	unsigned char	check;
 
-	(void)ft_parse(); //function which gets data from the map files.
+	check = ft_parse(); //function which gets data from the map files.
+	if (check == 1)
+		return (ft_error("\nERROR\n", 2));
 	temp = (int*)ft_memalloc(sizeof(int) * start_frame()->count); //allocating the variable *temp memory.
 	temp[0] = start_frame()->ants;	//assigning the first index of integer array *temp, the value of the number of ants.
 	if (start_frame()->ants <= 0 || ft_check_room(*get_room())) //if the number of ants are lower than 0, or if the is no start or end room.

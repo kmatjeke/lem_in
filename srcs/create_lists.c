@@ -32,7 +32,7 @@ int			***get_path(void)
 	unsigned int	i;
 
 	if (start != 1 || end != 1) {
-	    ft_putstr("\nERROR");
+	    ft_putstr("\nERROR\n");
 	    exit(0);
 	}
 
