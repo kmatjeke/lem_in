@@ -2,7 +2,7 @@
 #include "lem_in.h"
 #include <limits.h>
 
-// ft_get_shortest_path.
+
 static int		ft_shortest_path(int dist[], int visited[])
 {
 	int				min_dist;
@@ -24,7 +24,7 @@ static int		ft_shortest_path(int dist[], int visited[])
 	return (min_index); // return distance of the closet room from the start room.
 }
 
-// initialise the table. ft_init_solver
+
 static unsigned char	ft_initialise_solver(int (*dist)[], int (*visited)[], int (*source)[])
 {
 	unsigned int	i;
@@ -43,7 +43,7 @@ static unsigned char	ft_initialise_solver(int (*dist)[], int (*visited)[], int (
 	return (0);
 }
 
-// change ft_solve to ft_dijskras_path
+
 int				ft_solve(int ants, unsigned int c, unsigned int v_index, int short_path)
 {
 	int				dist[start_frame()->count];
